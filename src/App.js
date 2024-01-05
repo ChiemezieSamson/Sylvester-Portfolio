@@ -1,9 +1,12 @@
 import Navigation from "./Components/Navigation/Navigation";
+import { FetchLanguage } from "./Components/Navigation/NavigationComponent/NavigationComponent";
 
 const App = () => {
+	const { lang, setIsLanguage } = FetchLanguage();
+	console.log(lang);
 	return (
-		<div className="text-black text-5xl">
-			<Navigation />
+		<div className="">
+			<Navigation lang={lang} setIsLanguage={setIsLanguage} />
 		</div>
 	);
 };
