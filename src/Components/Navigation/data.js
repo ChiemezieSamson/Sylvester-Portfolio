@@ -1,44 +1,56 @@
-import { DarkModeToggleButton } from "./NavigationComponent/NavigationComponent";
-
 export const naveLinks = [
 	{
 		id: "0",
 		url: "/",
-		name: "Home",
-		offsetOfForm: "home",
+		name: {
+			En: "Home",
+			Zh: "主页",
+		},
+		offsetOfLinks: "home",
 	},
 	{
 		id: "1",
 		url: "/about",
-		name: "About",
-		offsetOfForm: "about",
+		name: {
+			En: "About",
+			Zh: "关于",
+		},
+		offsetOfLinks: "about",
 	},
 	{
 		id: "2",
 		url: "/projects",
-		name: "Projects",
-		offsetOfForm: "projects",
+		name: {
+			En: "Projects",
+			Zh: "项目",
+		},
+		offsetOfLinks: "projects",
 	},
 	{
 		id: "3",
 		url: "/blog",
-		name: "Blog",
-		offsetOfForm: "blog",
+		name: {
+			En: "Blog",
+			Zh: "部落格",
+		},
+		offsetOfLinks: "blog",
 	},
 	{
 		id: "4",
 		url: "/certificates",
-		name: "Certificates",
-		offsetOfForm: "certificates",
-	},
-	{
-		id: "4",
-		url: "/contact",
-		name: "Contact",
-		offsetOfForm: "contact",
+		name: {
+			En: "Certificates",
+			Zh: "证书",
+		},
+		offsetOfLinks: "certificates",
 	},
 	{
 		id: "5",
-		darkMode: <DarkModeToggleButton />,
+		url: "/contact",
+		name: {
+			En: "Contact",
+			Zh: "联系",
+		},
+		offsetOfLinks: "contact",
 	},
 ];

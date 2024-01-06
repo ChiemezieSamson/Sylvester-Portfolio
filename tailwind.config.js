@@ -9,8 +9,10 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				bangers: ["Bangers", "cursive"],
-				montserrat: ["Montserrat", "sans-serif"],
+				round: ["Varela Round", "sans-serif"],
+				poppins: ["poppins", "sans-serif"],
+				lora: ["Lora", "serif"],
+				josefin: ["Josefin Sans", "sans-serif"],
 			},
 		},
 	},

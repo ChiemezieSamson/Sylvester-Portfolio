@@ -15,11 +15,15 @@
   }
 
   body {
-    @apply m-0 p-0 dark:bg-[#151c2c] dark:text-white;
+    @apply m-0 p-0 dark:bg-[#151c2c] text-slate-800 dark:text-white font-round
   }
 
   img {
     @apply w-full h-full object-cover object-center cursor-pointer
+  }
+
+  h2 {
+    @apply font-poppins font-semibold
   }
 
   [type='text'],
@@ -45,7 +49,32 @@
     @apply bg-[#182237]
   }
 
+  .bgLight {
+    @apply bg-stone-300/70
+  }
+
   .textSoft {
     @apply text-[#b7bac1]
+  }
+
+  .line {
+    @apply border-sky-500
+  }
+
+  .lineSoft {
+    @apply border-sky-400
+  }
+
+  .icon {
+    @apply inline-block text-lg
+  }
+
+  .navlink {
+    @apply h-px mt-1 w-0 border-0 opacity-0 invisible group-hover:w-[60%] group-hover:border group-hover:opacity-100 group-hover:visible 
+    transition-all duration-300 delay-100 ease-linear line block before:w-0 before:border-0 before:opacity-0 before:invisible before:absolute 
+    group-hover:before:border group-hover:before:opacity-100 group-hover:before:visible before:left-[65%] group-hover:before:w-[18%] 
+    before:transition-all before:duration-300 before:delay-100 before:ease-linear after:transition-all after:duration-300 after:delay-100 after:ease-linear
+    before:line before:h-px before:-mt-px after:w-0 after:border-0 after:opacity-0 after:invisible after:absolute group-hover:after:border 
+    group-hover:after:opacity-100 group-hover:after:visible after:left-[88%] group-hover:after:w-[12%] after:line after:h-px after:-mt-px
   }
 }

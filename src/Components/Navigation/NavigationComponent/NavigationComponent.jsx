@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEllipsisH, FaEllipsisV, FaEye, FaEyeSlash } from "react-icons/fa";
 
-export const DarkModeToggleButton = () => {
+export const DarkModeToggleButton = ({lang}) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -26,15 +26,15 @@ export const DarkModeToggleButton = () => {
     });
   };
 
-  return (
-    <div>
-       <button
-        className="rounded-full border-2 border-gray-300 dark:border-gray-700 dark:text-gray-100"
-        onClick={toggleDarkMode}
-      >
-        {isDarkMode ? <FaEye /> : <FaEyeSlash />}
-      </button>
-    </div>
+  return ( 
+    <button
+    className="inline-block"
+    type="button"
+    title={isDarkMode ? `${lang ? "lightMode" : "灯光模式"}` : `${lang ? "darkMode" : "深色模式"}`}
+    onClick={toggleDarkMode}
+  >
+    {isDarkMode ? <FaEyeSlash className="icon"/> : <FaEye className="icon"/>}
+  </button>
   )
 }
 
@@ -88,4 +88,19 @@ export const FetchLanguage = () => {
   }, [languageMode]);
 
   return {lang: isLanguage, setIsLanguage: handleSetLanguage}
+}
+
+export const NavBartoggleIcon = ({navBar, toggleNavBar}) => {
+  return (
+    <span
+					className="m-4 p-2 inline-block dark:bgSoft rounded-lg bgLight dark:text-white sm:hidden"
+					onClick={toggleNavBar}
+				>
+					{navBar ? (
+						<FaEllipsisH className="icon" />
+					) : (
+						<FaEllipsisV className="icon" />
+					)}
+				</span>
+  )
 }
