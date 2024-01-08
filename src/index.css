@@ -62,11 +62,11 @@
   }
 
   .line {
-    @apply border border-solid border-sky-500
+    @apply border-solid border-sky-500
   }
 
   .lineSoft {
-    @apply border border-solid border-sky-400
+    @apply border-solid border-sky-400
   }
 
   .icon {
