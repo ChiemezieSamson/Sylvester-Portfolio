@@ -32,26 +32,34 @@ export const personalInfo = {
 		{
 			id: 0,
 			name: "linkedin",
-			icon: <FaLinkedin className="icon text-[#0A66C2] rounded-full" />,
+			icon: (
+				<FaLinkedin className="dark:text-[#0A66C2] group-hover:text-[#0A66C2] rounded-full" />
+			),
 			url: "https://www.linkedin.com/feed",
 		},
 		{
 			id: 1,
 			name: "gitHub",
-			icon: <FaGithubSquare className="icon text-[#000] rounded-full" />,
+			icon: (
+				<FaGithubSquare className="dark:text-[#000] group-hover:text-[#000] rounded-full" />
+			),
 			color: "#000",
 			url: "https://www.linkedin.com/feed",
 		},
 		{
 			id: 2,
 			name: "twitter",
-			icon: <FaTwitterSquare className="icon text-[#1D9BF0] rounded-full" />,
+			icon: (
+				<FaTwitterSquare className="dark:text-[#1D9BF0] group-hover:text-[#1D9BF0] rounded-full" />
+			),
 			url: "https://www.linkedin.com/feed",
 		},
 		{
 			id: 3,
 			name: "instagram",
-			icon: <FaInstagramSquare className="icon text-[#E4405F] rounded-full" />,
+			icon: (
+				<FaInstagramSquare className="dark:text-[#E4405F] group-hover:text-[#E4405F] rounded-full" />
+			),
 			url: "https://www.linkedin.com/feed",
 		},
 	],
@@ -62,7 +70,7 @@ export const HeroProjects = [
 		id: 0,
 		name: {
 			En: "Excel",
-			Zh: "",
+			Zh: "Excel",
 		},
 		project_number: 1,
 		image_Icon: Excel,
@@ -71,7 +79,7 @@ export const HeroProjects = [
 		id: 1,
 		name: {
 			En: "PowerBI",
-			Zh: "",
+			Zh: "PowerBI",
 		},
 		project_number: 3,
 		image_Icon: PowerBI,
@@ -80,7 +88,7 @@ export const HeroProjects = [
 		id: 2,
 		name: {
 			En: "SQL",
-			Zh: "",
+			Zh: "SQL",
 		},
 		project_number: 1,
 		image_Icon: _SQL,

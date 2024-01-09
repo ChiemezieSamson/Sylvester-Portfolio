@@ -6,6 +6,7 @@ import {
 } from "./Components/Navigation/NavigationComponent/NavigationComponent";
 import { useWindowSize } from "@uidotdev/usehooks";
 import Hero from "./Components/HeroComponent/Hero";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
 	const [navBar, setNavBar] = useState(false);
@@ -33,16 +34,20 @@ const App = () => {
 		<div className="relative py-10 ">
 			{/* Navigation Links and Bar button */}
 
-			<div className="grid grid-flow-col justify-between sm:justify-normal absolute z-50 inset-x-0 top-0">
-				<Navigation lang={lang} navBar={navBar} />
+			<div className="grid grid-flow-col bgLight dark:bgSoft justify-between sm:justify-normal fixed z-50 inset-x-0 top-0">
+				<Navigation size={size} lang={lang} navBar={navBar} />
 				<NavBartoggleIcon navBar={navBar} toggleNavBar={toggleNavBar} />
 			</div>
 
-			<div className="max-w-7xl mx-auto">
+			<div className="bgLight dark:bgSoft">
 				{/* hero component */}
-				<div>
+				<div className="max-w-7xl mx-auto">
 					<Hero lang={lang} />
 				</div>
+			</div>
+
+			<div className="mt-40 ">
+				<Footer lang={lang} setIsLanguage={setIsLanguage} />
 			</div>
 		</div>
 	);

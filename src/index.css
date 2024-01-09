@@ -50,11 +50,11 @@
   }
 
   .bgLight {
-    @apply bg-stone-300
+    @apply bg-slate-300
   }
 
   .bgLightSoft {
-    @apply bg-stone-200
+    @apply bg-slate-200
   }
 
   .textSoft {

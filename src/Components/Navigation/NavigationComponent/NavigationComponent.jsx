@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaEllipsisH, FaEllipsisV, FaEye, FaEyeSlash } from "react-icons/fa";
+import { BsTranslate } from "react-icons/bs";
 
 export const DarkModeToggleButton = ({lang}) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -59,10 +60,13 @@ export const LanguageToggleButton = ({lang, setIsLanguage}) => {
   return (
     <div>
        <button
-        className="p-2 rounded-full border-2 border-gray-300 dark:border-gray-700 dark:text-gray-100"
+        className=""
         onClick={toggleLanguage}
       >
-        {lang ? "English" : "Chinese"}
+        <span>
+          <BsTranslate />
+        </span>
+        {lang ? "Chinese" : "English"}
       </button>
     </div>
   )
@@ -93,7 +97,7 @@ export const FetchLanguage = () => {
 export const NavBartoggleIcon = ({navBar, toggleNavBar}) => {
   return (
     <span
-					className="m-4 p-2 inline-block dark:bgSoft rounded-lg bgLight dark:text-white sm:hidden"
+					className="mx-4 my-2 p-2 inline-block dark:bg rounded-lg bgLightSoft dark:text-white sm:hidden"
 					onClick={toggleNavBar}
 				>
 					{navBar ? (
