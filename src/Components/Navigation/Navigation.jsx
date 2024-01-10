@@ -1,14 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import { naveLinks } from "./data";
 import { DarkModeToggleButton } from "./NavigationComponent/NavigationComponent";
 
 
-const Navigation = ({lang, navBar, size}) => {
-  const handleToLink = (offsetOflink) => {
-    document.body.scrollTop = offsetOflink.current.offsetTop; 
-    window.scrollTo({left: 0, top: offsetOflink.current.offsetTop, behavior: "smooth"})
-    return
-  }
+const Navigation = ({lang, navBar, size, handleCloseSideBar}) => {
+  const [active, setActive] = useState("")
+
+ const handleActive = (text) => {
+  setActive(() => text)
+  handleCloseSideBar()
+ } 
  return (
   <nav className="bgLight dark:bg w-full block">
     <ul className={`grid grid-flow-row dark:bg bgLight sm:dark:bg-transparent sm:bg-transparent drop-shadow-md fixed py-5 ${navBar ? "translate-x-0 visible opacity-100" : "-translate-x-full invisible opacity-0"}
@@ -17,13 +18,13 @@ const Navigation = ({lang, navBar, size}) => {
         return (
           <li 
             key={link.id}
-            onClick={() => handleToLink(link.offsetOfLinks)}
             className="px-10 py-1.5 sm:px-0 group cursor-pointer hover:bg-slate-200 sm:hover:bg-transparent dark:hover:bg-slate-500 dark:sm:hover:bg-transparent transition-colors duration-300 ease-linear"
+            onClick={() => handleActive(link.offsetOfLinks)}
           >
-            <span className="inline-block font-poppins uppercase leading-3 relative"> 
+            <a href={"#" + link.offsetOfLinks} className="inline-block font-poppins uppercase leading-3 relative"> 
               {lang ? link.name.En : link.name.Zh}{size.width < 640 && !lang ? "-" + link.name.En : ""}
-              <span className="navlink"></span>
-            </span>
+              <span className={active === link.offsetOfLinks ? "active" : "navlink"}></span>
+            </a>
           </li>
         )
       })}

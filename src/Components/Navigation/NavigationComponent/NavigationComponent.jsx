@@ -60,13 +60,14 @@ export const LanguageToggleButton = ({lang, setIsLanguage}) => {
   return (
     <div>
        <button
-        className=""
+        className="dark:bgLightSoft bgSoft text-stone-200 hover:bg-[rgba(24,34,55,0.9)] dark:text-slate-800 dark:hover:bg-sky-100 px-2 whitespace-nowrap transitionEffect"
+        title={lang ? "翻译" : "translate"}
         onClick={toggleLanguage}
       >
-        <span>
-          <BsTranslate />
+          <BsTranslate className="inline-block text-xl"/>
+        <span className="inline-block mx-1">
+          {lang ? "Chinese" : "English"}
         </span>
-        {lang ? "Chinese" : "English"}
       </button>
     </div>
   )

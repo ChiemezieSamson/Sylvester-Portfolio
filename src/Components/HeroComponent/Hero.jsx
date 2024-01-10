@@ -3,7 +3,7 @@ import { HeroProjects, personalInfo } from './data'
 
 const Hero = ({lang}) => {
   return (
-    <div className='lg:py-10 relative'>
+    <div id={"home"} className='lg:py-10 relative'>
       <div className='grid grid-flow-row lg:grid-flow-col'>
 
         {/* Name and welcom Text */}
@@ -22,7 +22,7 @@ const Hero = ({lang}) => {
           <ul className='mt-20'>
             {personalInfo.socialMedia.map((social) => {
               return (
-                <li key={social.id} className="inline-block bg-white group py-1 px-1.5 mx-1.5 text-3xl rounded-full cursor-pointer transitionEffect dark:hover:bg-sky-200" title={social?.name}>
+                <li key={social.id} className="inline-block bg-white group py-1 px-1.5 mx-1.5 text-3xl rounded-full cursor-pointer transitionEffect dark:hover:bg-sky-100 transitionEffect" title={social?.name}>
                   <a href={social.id} target='_blank' rel="noreferrer">
                     {social?.icon}
                   </a>

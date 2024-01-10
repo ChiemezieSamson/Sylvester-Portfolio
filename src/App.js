@@ -7,6 +7,7 @@ import {
 import { useWindowSize } from "@uidotdev/usehooks";
 import Hero from "./Components/HeroComponent/Hero";
 import Footer from "./Components/Footer/Footer";
+import About from "./Components/About/About";
 
 const App = () => {
 	const [navBar, setNavBar] = useState(false);
@@ -34,21 +35,33 @@ const App = () => {
 		<div className="relative py-10 ">
 			{/* Navigation Links and Bar button */}
 
-			<div className="grid grid-flow-col bgLight dark:bgSoft justify-between sm:justify-normal fixed z-50 inset-x-0 top-0">
-				<Navigation size={size} lang={lang} navBar={navBar} />
+			<header className="grid grid-flow-col bgLight dark:bgSoft justify-between sm:justify-normal fixed z-50 inset-x-0 top-0">
+				<Navigation
+					size={size}
+					lang={lang}
+					navBar={navBar}
+					handleCloseSideBar={handleCloseSideBar}
+				/>
 				<NavBartoggleIcon navBar={navBar} toggleNavBar={toggleNavBar} />
-			</div>
+			</header>
 
-			<div className="bgLight dark:bgSoft">
-				{/* hero component */}
-				<div className="max-w-7xl mx-auto">
-					<Hero lang={lang} />
+			<main onClick={handleCloseSideBar}>
+				<div className="bgLight dark:bgSoft mb-40">
+					{/* hero component */}
+					<div className="max-w-7xl mx-auto">
+						<Hero lang={lang} />
+					</div>
 				</div>
-			</div>
 
-			<div className="mt-40 ">
+				{/* About component */}
+				<div className="max-w-7xl mx-auto">
+					<About lang={lang} />
+				</div>
+			</main>
+
+			<footer className="mt-40" onClick={handleCloseSideBar}>
 				<Footer lang={lang} setIsLanguage={setIsLanguage} />
-			</div>
+			</footer>
 		</div>
 	);
 };
