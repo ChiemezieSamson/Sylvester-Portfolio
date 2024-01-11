@@ -7,11 +7,9 @@ const About = ({lang}) => {
   return (
     <div className='py-20 xs:px-2 sm:px-4'>
       {/* About texts */}
-      <div>
-        <div>
-          <SectionHead lang={lang} eng={"About"} chn={"关于"} _eng={"Me"} _chn={"我"} _id={"about"}/>
-        </div>
-        
+      <div>        
+        <SectionHead lang={lang} eng={"About"} chn={"关于"} _eng={"Me"} _chn={"我"} _id={"about"}/>
+                
         <div className='p-2'>
           <p>{lang ? aboutMe?.mainIntro?.En : aboutMe?.mainIntro?.Zh}</p>
 
@@ -28,10 +26,8 @@ const About = ({lang}) => {
       </div>
 
       {/* Technical skills */}
-      <div className='my-10'>
-        <div>
-          <SectionHead lang={lang} eng={"Technical"} chn={"技术"} _eng={"Skills"} _chn={"能力"}/>
-        </div>
+      <div className='my-10'>        
+        <SectionHead lang={lang} eng={"Technical"} chn={"技术"} _eng={"Skills"} _chn={"能力"}/>        
 
         <ul className='my-2 p-1.5'>
             {technicalSkills?.map(skill => {

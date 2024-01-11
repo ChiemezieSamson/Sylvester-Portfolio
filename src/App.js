@@ -8,6 +8,8 @@ import { useWindowSize } from "@uidotdev/usehooks";
 import Hero from "./Components/HeroComponent/Hero";
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
+import Projects from "./Components/Projects/Projects";
+import Awards from "./Components/Awards&cert/Awards";
 
 const App = () => {
 	const [navBar, setNavBar] = useState(false);
@@ -56,6 +58,19 @@ const App = () => {
 				{/* About component */}
 				<div className="max-w-7xl mx-auto">
 					<About lang={lang} />
+				</div>
+
+				{/* My Project component */}
+				<div className="max-w-7xl mx-auto">
+					<Projects lang={lang} />
+				</div>
+
+				{/* margin line*/}
+				<div className="line border-8 max-w-[40%] ml-auto text-right"></div>
+
+				{/* Awards & Certificate */}
+				<div className="max-w-7xl mx-auto">
+					<Awards lang={lang} />
 				</div>
 			</main>
 

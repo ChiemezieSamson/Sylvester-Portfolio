@@ -7,7 +7,7 @@ const Hero = ({lang}) => {
       <div className='grid grid-flow-row lg:grid-flow-col'>
 
         {/* Name and welcom Text */}
-        <div className='mt-10 py-5 xs:px-2 sm:px-4 max-w-3xl'>
+        <div className='mt-10 py-5 xx:px-2 sm:px-4 max-w-3xl'>
           <h4 className='text-4xl sm:text-5xl font-lora font-extralight py-2 my-2'>{lang ? personalInfo?.welcome?.En : personalInfo?.welcome?.Zh}</h4>
           <h1 className='text-4xl xs:text-[48px] sm:text-[65px] leading-normal font-poppins font-bold py-3 block my-5 text-balance tracking-wide'>
             {lang ? personalInfo?.Full_name?.En : personalInfo?.Full_name?.Zh}{!lang && "-" + personalInfo?.Full_name?.En}
