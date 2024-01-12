@@ -33,7 +33,7 @@ export const personalInfo = {
 			id: 0,
 			name: "linkedin",
 			icon: (
-				<FaLinkedin className="dark:text-[#0A66C2] group-hover:text-[#0A66C2] rounded-full" />
+				<FaLinkedin className="dark:text-[#0A66C2] group-hover:text-[#0A66C2] rounded-full inline-block" />
 			),
 			url: "https://www.linkedin.com/feed",
 		},
@@ -41,7 +41,7 @@ export const personalInfo = {
 			id: 1,
 			name: "gitHub",
 			icon: (
-				<FaGithubSquare className="dark:text-[#000] group-hover:text-[#000] rounded-full" />
+				<FaGithubSquare className="dark:text-[#000] group-hover:text-[#000] rounded-full inline-block" />
 			),
 			color: "#000",
 			url: "https://www.linkedin.com/feed",
@@ -50,7 +50,7 @@ export const personalInfo = {
 			id: 2,
 			name: "twitter",
 			icon: (
-				<FaTwitterSquare className="dark:text-[#1D9BF0] group-hover:text-[#1D9BF0] rounded-full" />
+				<FaTwitterSquare className="dark:text-[#1D9BF0] group-hover:text-[#1D9BF0] rounded-full inline-block" />
 			),
 			url: "https://www.linkedin.com/feed",
 		},
@@ -58,7 +58,7 @@ export const personalInfo = {
 			id: 3,
 			name: "instagram",
 			icon: (
-				<FaInstagramSquare className="dark:text-[#E4405F] group-hover:text-[#E4405F] rounded-full" />
+				<FaInstagramSquare className="dark:text-[#E4405F] group-hover:text-[#E4405F] rounded-full inline-block" />
 			),
 			url: "https://www.linkedin.com/feed",
 		},

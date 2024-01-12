@@ -20,10 +20,10 @@ const Hero = ({lang}) => {
 
           {/* social media */}
           <ul className='mt-20'>
-            {personalInfo.socialMedia.map((social) => {
+            {personalInfo?.socialMedia?.map((social) => {
               return (
-                <li key={social.id} className="inline-block bg-white group py-1 px-1.5 mx-1.5 text-3xl rounded-full cursor-pointer transitionEffect dark:hover:bg-sky-100 transitionEffect" title={social?.name}>
-                  <a href={social.id} target='_blank' rel="noreferrer">
+                <li key={social?.id} className="group inline-block text-3xl cursor-pointer" title={social?.name}>
+                  <a href={social?.url} target='_blank' rel="noreferrer" className='bg-white py-1 px-1.5 mx-1.5 transitionEffect dark:hover:bg-sky-100 inline-block rounded-full'>
                     {social?.icon}
                   </a>
                 </li>
@@ -45,14 +45,14 @@ const Hero = ({lang}) => {
       {/* Projects */} 
       <div className='max-w-[350px] h-[387px] sm:h-[496px] lg:h-32 relative -bottom-[103px] isolate before:line before:border-[20px] before:absolute before:top-1/2 before:-left-[100%] before:inset-x-0'>
         <ul className='grid gap-y-4 lg:grid-flow-col dark:bg-white bgSoft text-white dark:text-slate-800 py-10 rounded-3xl absolute right-0 sm:right-auto sm:left-[49%] lg:max-w-2xl'>
-          {HeroProjects.map((project) => {
+          {HeroProjects?.map((project) => {
             return (
-              <li key={project.id} className='grid grid-cols-2 w-60 sm:w-[300px] lg:max-w-52 mx-auto justify-center text-center'>
-                <img src={project?.image_Icon} alt={project?.name.En} className='size-20 sm:size-32 lg:size-20 mx-auto'/>
+              <li key={project?.id} className='grid grid-cols-2 w-60 sm:w-[300px] lg:max-w-52 mx-auto justify-center text-center'>
+                <img src={project?.image_Icon} alt={project?.name?.En} className='size-20 sm:size-32 lg:size-20 mx-auto'/>
              
                 <div className='grid grid-flow-row text-lg sm:text-xl'>
                   <span className='text-xl sm:text-3xl font-semibold'>{project?.project_number}</span>
-                  <span>{lang ? project.name.En : project.name.Zh}</span>
+                  <span>{lang ? project?.name?.En : project?.name?.Zh}</span>
                   <span>{lang ? "Project" : "事业"}</span>
                 </div>
               </li>

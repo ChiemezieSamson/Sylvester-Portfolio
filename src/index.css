@@ -69,6 +69,10 @@
     @apply border-solid border-sky-400
   }
 
+  .sectionWidth {
+    @apply max-w-7xl mx-auto
+  }
+
   .icon {
     @apply inline-block text-2xl
   }
@@ -89,5 +93,12 @@
   .active {
     @apply w-[60%] border line h-px mt-1 block before:absolute before:border before:line before:left-[65%] before:w-[18%] before:h-px before:-mt-px
     after:absolute after:border after:line after:left-[88%] after:w-[12%] after:h-px after:-mt-px
+  }
+
+  .contactImage {
+    background-image: url('./asset/image/handshake.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
   }
 }

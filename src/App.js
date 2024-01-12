@@ -10,6 +10,7 @@ import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
 import Projects from "./Components/Projects/Projects";
 import Awards from "./Components/Awards&cert/Awards";
+import Contact from "./Components/Contact/Contact";
 
 const App = () => {
 	const [navBar, setNavBar] = useState(false);
@@ -34,7 +35,7 @@ const App = () => {
 	}, [size]);
 
 	return (
-		<div className="relative py-10 ">
+		<div className="relative pt-10">
 			{/* Navigation Links and Bar button */}
 
 			<header className="grid grid-flow-col bgLight dark:bgSoft justify-between sm:justify-normal fixed z-50 inset-x-0 top-0">
@@ -50,31 +51,40 @@ const App = () => {
 			<main onClick={handleCloseSideBar}>
 				<div className="bgLight dark:bgSoft mb-40">
 					{/* hero component */}
-					<div className="max-w-7xl mx-auto">
+					<div className="sectionWidth">
 						<Hero lang={lang} />
 					</div>
 				</div>
 
 				{/* About component */}
-				<div className="max-w-7xl mx-auto">
+				<div className="sectionWidth">
 					<About lang={lang} />
 				</div>
 
 				{/* My Project component */}
-				<div className="max-w-7xl mx-auto">
-					<Projects lang={lang} />
+				<div className="bgLight dark:bgSoft">
+					<div className="sectionWidth">
+						<Projects lang={lang} />
+					</div>
 				</div>
 
 				{/* margin line*/}
 				<div className="line border-8 max-w-[40%] ml-auto text-right"></div>
 
 				{/* Awards & Certificate */}
-				<div className="max-w-7xl mx-auto">
+				<div className="sectionWidth">
 					<Awards lang={lang} />
 				</div>
 			</main>
 
-			<footer className="mt-40" onClick={handleCloseSideBar}>
+			<footer
+				className="mt-40 pb-60 bgLight dark:bgSoft"
+				onClick={handleCloseSideBar}
+			>
+				<div className="sectionWidth relative -top-[150px]">
+					<Contact lang={lang} />
+				</div>
+
 				<Footer lang={lang} setIsLanguage={setIsLanguage} />
 			</footer>
 		</div>

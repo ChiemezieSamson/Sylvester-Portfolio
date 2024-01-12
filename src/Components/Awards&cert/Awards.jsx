@@ -14,12 +14,12 @@ const Awards = ({lang}) => {
       <SectionHead lang={lang} eng={"Awards"} chn={"奖项"} _eng={"& Certificate"} _chn={"与证书"} _id={"certificates"}/>
 
       <ul className='py-10 grid sm:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-4'>
-        {awardsCertificate.map((award) => {
+        {awardsCertificate?.map((award) => {
           return (
-            <li key={award.id} className='my-5 shadow-sm shadow-[rgba(21,28,44,0.3)] rounded-xl text-center'>
-              <figure onClick={() => handleOverLay(award.image)}>
-                <img src={award.image} alt={"project"} className='aspect-[16/10] rounded-xl'/>
-                <figcaption className='px-2 my-1'>{lang ? award.text.En : award.text.Zh}</figcaption>
+            <li key={award?.id} className='my-5 shadow-sm shadow-[rgba(21,28,44,0.3)] rounded-xl text-center'>
+              <figure onClick={() => handleOverLay(award?.image)}>
+                <img src={award?.image} alt={"project"} className='aspect-[16/10] rounded-xl'/>
+                <figcaption className='px-2 my-1'>{lang ? award?.text?.En : award?.text?.Zh}</figcaption>
               </figure>
             </li>
           )
