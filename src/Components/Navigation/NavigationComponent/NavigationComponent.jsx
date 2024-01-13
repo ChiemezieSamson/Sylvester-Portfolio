@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaEllipsisH, FaEllipsisV, FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEllipsisH, FaEllipsisV, FaMoon, FaSun } from "react-icons/fa";
 import { BsTranslate } from "react-icons/bs";
 
 export const DarkModeToggleButton = ({lang}) => {
@@ -34,7 +34,7 @@ export const DarkModeToggleButton = ({lang}) => {
     title={isDarkMode ? `${lang ? "lightMode" : "灯光模式"}` : `${lang ? "darkMode" : "深色模式"}`}
     onClick={toggleDarkMode}
   >
-    {isDarkMode ? <FaEyeSlash className="icon"/> : <FaEye className="icon"/>}
+    {isDarkMode ? <FaSun className="icon"/> : <FaMoon className="icon"/>}
   </button>
   )
 }

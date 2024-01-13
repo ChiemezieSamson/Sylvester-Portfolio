@@ -13,7 +13,7 @@ const Navigation = ({lang, navBar, size, handleCloseSideBar}) => {
  return (
   <nav className="bgLight dark:bg w-full block">
     <ul className={`grid grid-flow-row dark:bg bgLight sm:dark:bg-transparent sm:bg-transparent drop-shadow-md fixed py-5 ${navBar ? "translate-x-0 visible opacity-100" : "-translate-x-full invisible opacity-0"}
-      sm:translate-x-0 sm:visible sm:opacity-100 transition-all duration-300 ease-out sm:grid-flow-col sm:py-3 sm:max-w-xl sm:mx-auto sm:gap-x-3 sm:static`}>
+      sm:translate-x-0 sm:visible sm:opacity-100 transition-all duration-300 ease-out sm:grid-flow-col sm:py-3 sm:max-w-xl sm:mx-2 sm:gap-x-3 sm:static`}>
       {naveLinks?.map((link) => {
         return (
           <li 
