@@ -15,7 +15,7 @@ const Navigation = ({lang, navBar, size, handleCloseSideBar, setIsLanguage}) => 
     <div className="grid grid-flow-col justify-between max-w-4xl mx-auto sm:px-2">
       <div className="py-3 mx-2 sm:mx-0">
         <span className="inline-block py-1 px-[6px] tracking-tighter mx-0.5 text-center font-poppins font-bold rounded-full dark:bg-white dark:text-slate-800 text-stone-200 bgSoft">
-          Kc
+          Oc
         </span>
           <small className="inline-block align-bottom font-semibold font-round sm:hidden md:inline-block">Okafor Chukwuka.</small>
       </div>

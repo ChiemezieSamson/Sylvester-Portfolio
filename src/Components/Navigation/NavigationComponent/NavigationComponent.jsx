@@ -93,7 +93,7 @@ export const FetchLanguage = () => {
 export const NavBartoggleIcon = ({navBar, toggleNavBar}) => {
   return (
     <span
-					className="mx-4 my-2 p-2 inline-block dark:bg rounded-lg bgLightSoft dark:text-white sm:hidden"
+					className="mx-4 my-2 p-2 grid items-center justify-center dark:bg rounded-lg bgLightSoft dark:text-white sm:hidden "
 					onClick={toggleNavBar}
 				>
 					{navBar ? (
