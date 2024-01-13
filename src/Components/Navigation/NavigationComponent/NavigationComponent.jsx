@@ -59,7 +59,7 @@ export const LanguageToggleButton = ({lang, setIsLanguage}) => {
 
   return (  
       <button
-      className="whitespace-nowrap transitionEffect"
+      className="whitespace-nowrap"
       title={lang ? "中文-Chinese" : "English"}
       onClick={toggleLanguage}
     >
