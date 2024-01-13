@@ -1,19 +1,11 @@
 import React from 'react'
-import { LanguageToggleButton } from '../Navigation/NavigationComponent/NavigationComponent';
 
-const Footer = ({setIsLanguage, lang}) => {
+const Footer = () => {
   return (
-    <div className='dark:bgSoft bgLight fixed bottom-0 inset-x-0 border-t border-slate-500/50'>
-      <div className='max-w-xl mx-auto grid grid-flow-col justify-between'>
+    <div className='dark:bgSoft bgLight border-t border-slate-500/50 text-center'>
         <small className='inline-block pt-1'>
           copyright &copy; 2022 by Nebe.Samson 
         </small>
-        <div>
-          <div>
-            <LanguageToggleButton lang={lang} setIsLanguage={setIsLanguage}/>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }

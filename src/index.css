@@ -73,10 +73,6 @@
     @apply max-w-7xl mx-auto
   }
 
-  .icon {
-    @apply inline-block text-2xl
-  }
-
   .transitionEffect {
     @apply transition-all duration-300 delay-100 ease-linear
   }

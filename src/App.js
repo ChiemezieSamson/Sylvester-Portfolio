@@ -11,6 +11,7 @@ import About from "./Components/About/About";
 import Projects from "./Components/Projects/Projects";
 import Awards from "./Components/Awards&cert/Awards";
 import Contact from "./Components/Contact/Contact";
+import Resume from "./Components/Resume/Resume";
 
 const App = () => {
 	const [navBar, setNavBar] = useState(false);
@@ -44,6 +45,7 @@ const App = () => {
 					lang={lang}
 					navBar={navBar}
 					handleCloseSideBar={handleCloseSideBar}
+					setIsLanguage={setIsLanguage}
 				/>
 				<NavBartoggleIcon navBar={navBar} toggleNavBar={toggleNavBar} />
 			</header>
@@ -78,14 +80,18 @@ const App = () => {
 			</main>
 
 			<footer
-				className="mt-40 pb-60 bgLight dark:bgSoft"
+				className="mt-40 bgLight dark:bgSoft"
 				onClick={handleCloseSideBar}
 			>
 				<div className="sectionWidth relative -top-[150px]">
 					<Contact lang={lang} />
 				</div>
 
-				<Footer lang={lang} setIsLanguage={setIsLanguage} />
+				<div className="sectionWidth pb-60">
+					<Resume lang={lang} />
+				</div>
+
+				<Footer lang={lang} />
 			</footer>
 		</div>
 	);
