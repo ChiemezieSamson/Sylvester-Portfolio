@@ -17,6 +17,7 @@ export const MyProjects = [
 			Zh: "释放快消品成功：利用先进的分析、ETL 和动态报告，强化销售策略并赋能数据",
 		},
 		url: "https://www.nebe-samson.com/",
+		type: "excel",
 	},
 	{
 		id: 1,
@@ -31,6 +32,7 @@ export const MyProjects = [
 			Zh: "释放快消品成功：利用先进的分析、ETL 和动态报告，强化销售策略并赋能数据",
 		},
 		url: "https://www.nebe-samson.com/",
+		type: "powerBi",
 	},
 	{
 		id: 2,
@@ -45,6 +47,7 @@ export const MyProjects = [
 			Zh: "释放快消品成功：利用先进的分析、ETL 和动态报告，强化销售策略并赋能数据",
 		},
 		url: "https://www.nebe-samson.com/",
+		type: "powerBi",
 	},
 	{
 		id: 3,
@@ -59,6 +62,7 @@ export const MyProjects = [
 			Zh: "释放快消品成功：利用先进的分析、ETL 和动态报告，强化销售策略并赋能数据",
 		},
 		url: "https://www.nebe-samson.com/",
+		type: "sql",
 	},
 	{
 		id: 4,
@@ -73,6 +77,7 @@ export const MyProjects = [
 			Zh: "释放快消品成功：利用先进的分析、ETL 和动态报告，强化销售策略并赋能数据",
 		},
 		url: "https://www.nebe-samson.com/",
+		type: "powerBi",
 	},
 	{
 		id: 5,
@@ -87,5 +92,8 @@ export const MyProjects = [
 			Zh: "释放快消品成功：利用先进的分析、ETL 和动态报告，强化销售策略并赋能数据",
 		},
 		url: "https://www.nebe-samson.com/",
+		type: "powerBi",
 	},
 ];
+
+export const projectButton = ["all", "sql", "excel", "powerBi"];

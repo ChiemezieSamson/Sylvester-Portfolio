@@ -27,7 +27,7 @@
   }
 
   p {
-    @apply text-lg p-px my-0.5 lg:text-xl
+    @apply text-lg p-px my-0.5 lg:text-xl tracking-wide
   }
 
   [type='text'],

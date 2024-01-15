@@ -33,7 +33,7 @@ const About = ({lang}) => {
             {technicalSkills?.map(skill => {
               return (
                 <li key={skill.id} className='inline-block m-2 xs:text-lg sm:text-xl'>
-                  <button type='button' className='border border-solid border-transparent dark:border-transparent hover:border hover:line rounded-xl px-2 py-1 transitionEffect'>
+                  <button type='button' className='rounded-xl px-2 py-1'>
                     {lang ? skill.name.En : skill.name.Zh}
                   </button>
                 </li>
