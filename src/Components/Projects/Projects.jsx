@@ -21,12 +21,12 @@ const Projects = ({lang}) => {
     <div className='py-20 xx:px-2 sm:px-4'>
       <SectionHead lang={lang} eng={"My"} chn={"我的"} _eng={"Projects"} _chn={"项目"} _id={"projects"}/>  
 
-      <ul className='max-w-sm mx-auto xs:p-1'>
+      <ul className='max-w-sm mx-auto grid grid-cols-2 xx:grid-flow-col'>
         {buttonText?.map(text => {
           return (
             <li key={text?.id} className='inline-block m-2 text-sm xs:text-lg sm:text-xl' onClick={() => setButtonType(() => text.name)}>
               <button className='border border-solid border-transparent dark:border-transparent hover:border hover:line rounded-xl px-2 py-1 uppercase font-medium transitionEffect'>
-                {text.name}
+                {!lang && text.name === "all" ? "全部" : text.name}
               </button>
             </li>
           )
