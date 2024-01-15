@@ -15,7 +15,7 @@ const Hero = ({lang}) => {
 
           <>
             <div className='h-px w-16 border-[3px] xs:border-4 line inline-block mb-[5px] xs:mb-2'></div>
-            <span className='text-2xl xs:text-3xl sm:text-4xl font-poppins mx-2 xs:mx-6'>{lang ? personalInfo?.profession?.En : personalInfo?.profession?.Zh}</span>
+            <span className='text-2xl xs:text-3xl sm:text-4xl font-poppins mx-2 xs:mx-6'>{lang ? personalInfo?.profession?.En.slice(0, 12) : personalInfo?.profession?.Zh.slice(0, 12)}</span>
           </>
 
           {/* social media */}
