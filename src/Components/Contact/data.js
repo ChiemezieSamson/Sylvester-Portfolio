@@ -39,7 +39,7 @@ export const contactMe = [
 			En: "Call",
 			Zh: "电话",
 		},
-		url: "tel: +91 9582140864",
+		url: "tel: +86 13104431812",
 		icon: <FaPhoneAlt className="inline-block" />,
 	},
 ];

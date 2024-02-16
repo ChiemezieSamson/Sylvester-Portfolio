@@ -5,7 +5,7 @@ export const nameResume = {
 		Zh: "王往",
 	},
 	profession: {
-		En: "Data Analyst",
+		En: "Data Engineer / Analytics Engineer",
 		Zh: "数据分析师",
 	},
 	resume: myResume,

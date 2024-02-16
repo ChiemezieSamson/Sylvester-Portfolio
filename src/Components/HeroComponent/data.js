@@ -24,7 +24,7 @@ export const personalInfo = {
 		Zh: "你好，我叫",
 	},
 	profession: {
-		En: "Data Analyst",
+		En: "Data Engineer",
 		Zh: "数据分析师",
 	},
 	Image: Image,
