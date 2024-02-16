@@ -40,9 +40,11 @@ const Projects = ({lang}) => {
               <img src={project?.project_image} alt={"project"} className='aspect-[16/10] rounded-t-xl dark:rounded-xl'/>
 
               <div className='px-2 mb-6'>
-                <h3 className='xs:text-xl sm:text-2xl font-poppins font-medium mt-10 mb-3'>{lang ? project?.title?.En :  project?.title?.Zh}</h3>
+                <h3 className='xs:text-xl sm:text-2xl font-poppins font-medium mt-10 mb-3' title={lang ?  project?.title?.En : project?.title}>
+                  {lang ? project?.title?.En?.slice(0, 25) :  project?.title?.Zh?.slice(0, 25)}{lang ? project?.title?.En?.length > 25 ? "..." : "" :  project?.title?.Zh?.length > 25 ? "..." : "" }
+                </h3>
                 <p className='p-px my-0.5 text-lg lg:text-xl'>
-                  {lang ? project?.text?.En?.slice(0, 150) : project?.text?.Zh?.slice(0, 150)}{lang ? project?.text?.En?.length > 150 ? "..." : "" :  project?.text?.Zh?.length > 150 ? "..." : "" }
+                  {lang ? project?.text?.En?.slice(0, 135) : project?.text?.Zh?.slice(0, 135)}{lang ? project?.text?.En?.length > 135 ? "..." : "" :  project?.text?.Zh?.length > 135 ? "..." : "" }
                 </p>
 
                 <div className='grid grid-flow-col justify-between mt-10 px-2'>                  

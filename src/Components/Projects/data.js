@@ -150,4 +150,4 @@ export const MyProjects = [
 	},
 ];
 
-export const projectButton = ["all", "ETL", "Data Analysis", "ML/DL"];
+export const projectButton = ["all", "ETL", "Analysis", "ML/DL"];
